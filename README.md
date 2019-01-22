@@ -1,4 +1,4 @@
-Event Planner 
+Event Planner
 =============
 Test driving a single paged javascript web app with a custom testing framework
 
@@ -6,12 +6,8 @@ Test driving a single paged javascript web app with a custom testing framework
 ---------------
 ```
 As a user
-So I can let people know about an event
-I can post an event with a name
-
-As a user
 So I can let people know more about an event
-I can provide more information when I post an event
+I can provide information when I post an event
 
 As a user
 So I can let people know when an event I post will take place
