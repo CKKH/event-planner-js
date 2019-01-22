@@ -8,12 +8,15 @@
   <center>
   <h1> Event Planner </h1>
     <form>
-     <input type="text" placeholder="Listing Details">
-     <input type="date" value="22/01/2019"> 
-     <input type="time" value="00:00">
-     <button type="button">Submit</button>
+     <input type="text" id="text" placeholder="Listing Details">
+     <input type="date" id="date" value="22/01/2019"> 
+     <input type="time" id="time" value="00:00">
+     <button type="button" onclick="postEvent()">Submit</button>
     </form>
+    <h2>Event List</h2>
+    <li id="EventList"></li>
   </center>
   </body>
   <script type="text/javascript" src="src/EventList.js"></script>
+  <script type="text/javascript" src="interface.js"></script>
 </html>
