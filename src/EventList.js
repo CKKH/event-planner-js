@@ -1,29 +1,22 @@
 function EventList () {
   this._entries = []
-}
-
-EventList.prototype.entries = function () {
-  this._entries
+  this._upcoming = []
 }
 
 EventList.prototype.saveListing = function (listing) {
   this._entries.push(listing)
 }
-//   this._details = details
-//   this._date = date
-//   this._time = time
-// }
 
-// var eventlist;
+// EventList.prototype.upcoming = function () {
+//   let upcoming = []
 
-// EventListing.prototype.details = function() {
-//   return this._details
-// }
-
-// EventListing.prototype.date = function() {
-//   return this._date
-// }
-
-// EventListing.prototype.time = function() {
-//   return this._time
+//   this._entries.forEach((listing) => {
+//   let currentDate = new Date().toLocaleDateString()
+//   let listingDate = listing
+//     if (listing.date() > currentDate) {
+//       upcoming.push(listing)
+//     }
+//     // console.log(upcoming)
+//     return this._upcoming = upcoming
+//   })
 // }

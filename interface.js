@@ -1,17 +1,20 @@
-function postEvent() {
-  let text = document.getElementById("text").value
-  let date = document.getElementById("date").value
-  let time = document.getElementById("time").value
+// window.addEventListener('load', () => {
 
-  let content = new EventListing(text, date, time);
-  console.log(content)
+  let eventList = new EventList();
 
-  let message = (`Event: ${content.details()} || Date: ${content.date()} || Time: ${content.time()}`)
-  console.log(message)
+  function postEvent() {
+    let text = document.getElementById("text").value
+    let dateString = document.getElementById("date").value
+    let time = document.getElementById("time").value
 
-  let messageToPrint = document.createTextNode(message);
+    let newEvent = new Listing(text, dateString, time);
 
-  let newItem = document.createElement('li')
-    newItem.appendChild(messageToPrint)
-    document.getElementById('EventList').appendChild(newItem)
-}
+    let message = (`Event: ${newEvent.details()} || Date: ${newEvent.date()} || Time: ${newEvent.time()}`)
+
+    let messageToPrint = document.createTextNode(message);
+
+    let newItem = document.createElement('li')
+      newItem.appendChild(messageToPrint)
+      document.getElementById('EventList').appendChild(newItem)
+  }
+// })

@@ -1,13 +1,24 @@
 describe('EventList', () => {
-  let eventList = new EventList()
-  let listing = new Listing('Hello, human', '13/02/2019', '20:00')
+  let futureListing = new Listing('Future listing', '30/02/2019', '20:00')
 
   it('instantiates with an empty array', () => {
-    expect(eventList.entries.length).toEqual(0)
+    let eventList = new EventList()
+    expect(eventList._entries.length).toEqual(0)
   })
 
-  it('EventListings can be stored in EventList', () => {
-    eventList.saveListing(listing)
-    expect(eventList._entries[0]).toEqual(listing)
+  it('Listings can be stored in EventList', () => {
+    let eventList = new EventList()
+    eventList.saveListing(futureListing)
+    expect(eventList._entries[0]).toEqual(futureListing)
   })
+
+  // it('Upcoming events can be displayed', () => {
+  //   let eventList = new EventList()
+  //   let pastListing = new Listing('Past listing', '01/01/2010', '08:00')
+  //   eventList.saveListing(pastListing)
+  //   eventList.saveListing(futureListing)
+  //   let upcoming = eventList.upcoming()
+  //   console.log(upcoming)
+  //   expect(upcoming[0]).toEqual(futureListing)
+  // })
 })
