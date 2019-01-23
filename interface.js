@@ -6,7 +6,7 @@ function postEvent() {
   let content = new EventList(text, date, time);
   console.log(content)
 
-  let message = (`Event: ${content.details()} || Date : ${content.date()}`)
+  let message = (`Event: ${content.details()} || Date: ${content.date()} || Time: ${content.time()}`)
   console.log(message)
 
   let messageToPrint = document.createTextNode(message);
