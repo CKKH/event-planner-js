@@ -3,7 +3,7 @@ function postEvent() {
   let date = document.getElementById("date").value
   let time = document.getElementById("time").value
 
-  let content = new EventList(text, date, time);
+  let content = new EventListing(text, date, time);
   console.log(content)
 
   let message = (`Event: ${content.details()} || Date: ${content.date()} || Time: ${content.time()}`)
