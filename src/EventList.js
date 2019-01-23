@@ -1,15 +1,19 @@
 function EventList (details, date, time) {
-  this.details = details
-  this.date = date
-  this.time = time
+  this._details = details
+  this._date = date
+  this._time = time
 }
 
 var eventlist;
 
-EventList.prototype.information = function() {
-  return this.details
+EventList.prototype.details = function() {
+  return this._details
 }
 
-EventList.prototype.dateOfEvent = function() {
-  return this.date
+EventList.prototype.date = function() {
+  return this._date
+}
+
+EventList.prototype.time = function() {
+  return this._time
 }

@@ -4,9 +4,10 @@ function postEvent() {
   let time = document.getElementById("time").value
 
   let content = new EventList(text, date, time);
-  console.log(content.information())
+  console.log(content)
 
-  let message = (`Event: ${content.information()} || Date : ${content.dateOfEvent()}`)
+  let message = (`Event: ${content.details()} || Date : ${content.date()}`)
+  console.log(message)
 
   let messageToPrint = document.createTextNode(message);
 
