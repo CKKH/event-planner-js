@@ -1,5 +1,5 @@
-describe('EventListing', () => {
-  var eventOne = new EventListing('Hello, Bea!', '12/02/2019', '19:30')
+describe('Listing', () => {
+  var eventOne = new Listing('Hello, Bea!', '12/02/2019', '19:30')
 
   it('contains information about the event', () => {
     expect(eventOne.details()).toEqual('Hello, Bea!')

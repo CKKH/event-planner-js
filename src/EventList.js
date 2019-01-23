@@ -1,15 +1,14 @@
 function EventList () {
-  this.entries = []
+  this._entries = []
 }
 
 EventList.prototype.entries = function () {
   this._entries
 }
 
-EventList.prototype.saveListing = function (eventListing) {
-  this.entries.push(eventListing)
+EventList.prototype.saveListing = function (listing) {
+  this._entries.push(listing)
 }
-
 //   this._details = details
 //   this._date = date
 //   this._time = time
