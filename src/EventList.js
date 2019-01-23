@@ -1,9 +1,13 @@
 function EventList () {
-  this._entries = []
+  this.entries = []
 }
 
 EventList.prototype.entries = function () {
   this._entries
+}
+
+EventList.prototype.saveListing = function (eventListing) {
+  this.entries.push(eventListing)
 }
 
 //   this._details = details
