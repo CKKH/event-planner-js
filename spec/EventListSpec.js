@@ -1,6 +1,7 @@
 describe('EventList', () => {
-  let futureListing = new Listing('Future listing', '30/02/2019', '20:00')
-  let futureListingTwo = new Listing('Future listing two', '31/03/2020', '08:00')
+  let futureListing = {_details:'Future listing', _date: '02/02/2022', _time: '02:02'}
+  // let futureListingTwo = {details: 'Future listing Two', date: '03/03/2019', time: '03:03')}
+  let pastListing = {_details: 'Past listing', _date: '01/01/2011', _time: '01:10'}
 
   it('instantiates with an empty array', () => {
     let eventList = new EventList()
@@ -14,19 +15,18 @@ describe('EventList', () => {
   })
 
   // it('Event List can be displayed', () => {
-  //   eventList = new EventList()
+  //   let eventList = new EventList()
   //   eventList.saveListing(futureListing)
   //   eventList.saveListing(futureListingTwo)
   //   let eventDisplay = eventList.render()
-  //   expect(eventDisplay).toEqual(futureListing, futureListingTwo) 
+  //   expect(eventDisplay).toEqual(eventList) 
   // })
 
-  it('Upcoming events can grouped', () => {
+  it('.upcoming returns an array of future listings', () => {
     let eventList = new EventList()
-    let pastListing = new Listing('Past listing', '01/01/2010', '08:00')
     eventList.saveListing(pastListing)
     eventList.saveListing(futureListing)
-    eventList.upcoming()
-    expect(eventList._upcomingListings[0]).toEqual(futureListing)
+    let upcomingEvents = eventList.upcoming()
+    expect(upcomingEvents[0]._date).toEqual('02/02/2022')
   })
 })

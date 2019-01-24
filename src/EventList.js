@@ -1,6 +1,5 @@
 function EventList () {
   this._entries = []
-  this._upcomingListings = []
 }
 
 EventList.prototype.saveListing = function (listing) {
@@ -8,17 +7,24 @@ EventList.prototype.saveListing = function (listing) {
 }
 
 EventList.prototype.upcoming = function () {
-  let upcoming = []
-
-  this._entries.forEach((listing) => {
-    let currentDate = new Date().toLocaleDateString()
-    let listingDate = listing._date
-      if (listingDate > currentDate) {
-        console.log(listingDate)
-        upcoming.push(listing)
-      }
+  let events = this._entries
+  let upcomingEvents = []
+  let today = new Date()
+  events.forEach(function(listing) {
+    let listingDate = new Date(listing._date)
+    if (listingDate > today) {
+    console.log(listingDate)
+      upcomingEvents.push(listing)
+    }
   })
-  this._upcomingListings = upcoming
-  console.log(this._upcomingListings)
-  return
+  return upcomingEvents
 }
+
+// EventList.prototype.render = function () {
+//   let div = document.createElement('div');
+//     this.upcoming().forEach((listing) => {
+//     let listingHtml = listing.render();
+//        div.appendChild(listingHtml);
+//    })
+//    return div
+// }
