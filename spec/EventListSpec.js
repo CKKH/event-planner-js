@@ -12,13 +12,12 @@ describe('EventList', () => {
     expect(eventList._entries[0]).toEqual(futureListing)
   })
 
-  // it('Upcoming events can be displayed', () => {
-  //   let eventList = new EventList()
-  //   let pastListing = new Listing('Past listing', '01/01/2010', '08:00')
-  //   eventList.saveListing(pastListing)
-  //   eventList.saveListing(futureListing)
-  //   let upcoming = eventList.upcoming()
-  //   console.log(upcoming)
-  //   expect(upcoming[0]).toEqual(futureListing)
-  // })
+  it('Upcoming events can be displayed', () => {
+    let eventList = new EventList()
+    let pastListing = new Listing('Past listing', '01/01/2010', '08:00')
+    eventList.saveListing(pastListing)
+    eventList.saveListing(futureListing)
+    eventList.upcoming()
+    expect(eventList._upcomingListings[0]).toEqual(futureListing)
+  })
 })
