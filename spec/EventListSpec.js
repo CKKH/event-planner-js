@@ -1,6 +1,6 @@
 describe('EventList', () => {
-  let futureListingOne = {_details:'Future listing One', _date: '02/02/2022', _time: '02:02'}
-  let futureListingTwo = {_details: 'Future listing 2', _date: '03/03/2033', _time: '03:03'}
+  let futureListingOne = {_details:'Future listing One', _date: '02/02/2022', _time: '02:02', elementToDisplay: function() {return document.createElement('div')}}
+  let futureListingTwo = {_details: 'Future listing 2', _date: '03/03/2033', _time: '03:03', elementToDisplay: function() {return document.createElement('div')}}
   let futureListingThree = {_details: 'Future listing 3', _date: '04/04/2044', _time: '04:04'}
   let pastListing = {_details: 'Past listing', _date: '01/01/2011', _time: '01:10'}
 
@@ -33,12 +33,11 @@ describe('EventList', () => {
     expect(sortedEvents[1]).toEqual(futureListingTwo)
     expect(sortedEvents[2]).toEqual(futureListingThree)
   })
-})
 
-  // it('Event List can be displayed', () => {
-  //   let eventList = new EventList()
-  //   eventList.saveListing(futureListing)
-  //   eventList.saveListing(futureListingTwo)
-  //   let eventDisplay = eventList.render()
-  //   expect(eventDisplay).toEqual(eventList) 
-  // })
+  it('.render adds 2 events to a div', () => {
+    let eventList = new EventList
+    eventList.saveListing(futureListingOne)
+    eventList.saveListing(futureListingTwo)
+    expect(eventList.render().childElementCount).toEqual(2)
+  })
+})
