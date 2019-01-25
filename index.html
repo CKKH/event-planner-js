@@ -1,9 +1,10 @@
 <html>
 <head>
     <title>Puff Event Planner</title>
+    <script src="config.js"></script>
+    <script src='interface.js'></script>
     <script src='src/EventList.js'></script>
     <script src='src/Listing.js'></script>
-    <script src='interface.js'></script>
 </head>
 <body bgcolor="2ECC40">
   <center>
@@ -18,10 +19,18 @@
   <div id="events">
 
   </div>
+
+  <div>
+    <input type="text" id="city">
+    <button id="weather-button">Get weather</button>
+  </div>
+
+  <div id="weather">
+
+  </div>
+
    <img src="https://cdn.images.express.co.uk/img/dynamic/128/590x/Puffin-790204.jpg"
         alt="Puffins" style="width:35%;height:260px;">
   </center>
 </body>
-  <script src="config.js"></script>
-  <script src="src/Weather.js"></script>
 </html>
