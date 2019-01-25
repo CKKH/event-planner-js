@@ -1,20 +1,22 @@
-// window.addEventListener('load', () => {
+window.addEventListener('load', () => {
 
-  let eventList = new EventList();
+    let eventList = new EventList()
+    window.el = eventList
 
-  function postEvent() {
-    let text = document.getElementById("text").value
-    let dateString = document.getElementById("date").value
-    let time = document.getElementById("time").value
+    let button = document.getElementById('create-listing-button')
+    button.addEventListener('click', () => {
+        let text = document.getElementById('text').value
+        let dateString = document.getElementById('date').value
+        let time = document.getElementById('time').value
+        let listing = new Listing(text, dateString, time)
+        eventList.saveListing(listing)
+        display()
+    })
 
-    let newEvent = new Listing(text, dateString, time);
-
-    let message = (`Event: ${newEvent.details()} || Date: ${newEvent.date()} || Time: ${newEvent.time()}`)
-
-    let messageToPrint = document.createTextNode(message);
-
-    let newItem = document.createElement('li')
-      newItem.appendChild(messageToPrint)
-      document.getElementById('EventList').appendChild(newItem)
-  }
-// })
+    const display = () => {
+        let eventsDiv = document.getElementById('events')
+        events = eventList.render()
+        eventsDiv.innerHTML = ''
+        eventsDiv.appendChild(events)
+    }
+})

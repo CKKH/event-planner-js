@@ -1,23 +1,23 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Event Planner</title>
-  </head>
-  <body bgcolor="8ffad0" >
+<html>
+<head>
+    <title>Puff Event Planner</title>
+    <script type='text/javascript' src='src/EventList.js'></script>
+    <script type='text/javascript' src='src/Listing.js'></script>
+    <script type='text/javascript' src='interface.js'></script>
+</head>
+<body bgcolor="2ECC40">
   <center>
-  <h1>Event Planner</h1>
-    <form>
-     <input type="text" id="text" placeholder="Listing Details">
-     <input type="date" id="date"> 
-     <input type="time" id="time">
-     <button type="button" onclick="postEvent()">Submit</button>
-    </form>
-    <h2>Event List</h2>
-    <li id="EventList"></li>
+  <h1>Puff Event Planner</h1>
+  <div id="form">
+      <input id="text" type="text">
+      <input id="date" type="date">
+      <input id="time" type="time">
+      <button id="create-listing-button">Submit</button>
+  </div>
+  <h2>Puff Event List</h2>
+  <div id="events">
+
+  </div>
   </center>
-  </body>
-  <script type="text/javascript" src="src/EventList.js"></script>
-  <script type="text/javascript" src="src/Listing.js"></script>
-  <script type="text/javascript" src="interface.js"></script>
+</body>
 </html>

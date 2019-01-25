@@ -4,8 +4,8 @@ function Listing (details, date, time) {
   this._time = time
 }
 
-EventList.prototype.elementToDisplay = function () {
+Listing.prototype.elementToDisplay = function () {
   let div = document.createElement('div')
-  div.innerText = `Event: ${this._details} || Date: ${this.date} || Time: ${this.time}`
+  div.innerText = `Event: ${this._details} || Date: ${this._date} || Time: ${this._time}`
   return div
 }

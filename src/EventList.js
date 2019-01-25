@@ -30,10 +30,10 @@ EventList.prototype.sortUpcoming = function () {
 }
 
 EventList.prototype.render = function () {
-  let div = document.createElement('div')
-    this.sortUpcoming().forEach((listing) => {
-    let listingHtml = listing.elementToDisplay()
-       div.appendChild(listingHtml)
-   })
-   return div
+ let div = document.createElement('div')
+ this.sortUpcoming().forEach((listing) => {
+     let eventHtml = listing.elementToDisplay()
+     div.appendChild(eventHtml)
+ })
+ return div
 }
