@@ -1,19 +1,27 @@
+<!-- ENSURE THIS FILE IS IN THE ROOT OF YOUR DIRECTORY -->
+
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
- <head>
-   <meta charset="utf-8">
-   <script src="spec/bcTestingFramework.js">
-   </script>
-   <title>Event Planner Tests</title>
- </head>
- <body>
-   <header>
-     <h3>Event Planner - Tests</h3>
-   </header>
-   <p>See the console for test outcomes!</p>
- </body>
-   <script src="config.js"></script>
-   <script src="src/EventList.js"></script>
-   <script src="src/Listing.js"></script>
-   <script src="spec/EventListSpec.js"></script>
+<head>
+<title>Event Planner Tests</title>
+</head>
+<h1>Puffin Event Planner Testing</h1>
+
+<p>To see your tests:</p>
+<p>1) open your browser's dev tools (ctrl + shift + i in windows/linux, cmd + option + i on mac)</p>
+<p>2) navigate to the console tab</p>
+<p>3) view tests results</p>
+
+
+  <!-- source code for testing framework -->
+  <script type="text/javascript" src="lib/ImbaTestingFramework.js"></script>
+
+  <!-- production code to be tested -->
+    <script src="config.js"></script>
+    <script src="src/EventList.js"></script>
+    <script src="src/Listing.js"></script>
+
+  <!-- Include paths your spec files below  -->
+    <script src="spec/EventListSpec.js"></script>
+    <script src="spec/ListingSpec.js"></script>
+
 </html>
